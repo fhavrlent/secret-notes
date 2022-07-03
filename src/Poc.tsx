@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Container, Textarea } from '@mantine/core';
 import { RichTextEditor } from '@mantine/rte';
-import cryptoJs from 'crypto-js';
+import { lib } from 'crypto-js';
 
 import { encryptValue } from './utils';
 
-const randomPassword = cryptoJs.lib.WordArray.random(128 / 8).toString();
+const randomPassword = lib.WordArray.random(128 / 8).toString();
 
-export const Poc = () => {
+const Poc = () => {
   const [value, setValue] = useState('');
 
   return (
@@ -23,3 +23,5 @@ export const Poc = () => {
     </Container>
   );
 };
+
+export default Poc;

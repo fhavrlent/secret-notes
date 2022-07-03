@@ -1,11 +1,9 @@
-import cryptoJs from 'crypto-js';
+import { AES, enc } from 'crypto-js';
 
 export const encryptValue = (value: string, password: string) =>
-  cryptoJs.AES.encrypt(value, password, {
-    iv: cryptoJs.enc.Base64.parse(password),
+  AES.encrypt(value, password, {
+    iv: enc.Base64.parse(password),
   }).toString();
 
-export const decryptValue = (encryptedValue: string, password: string) => {
-  console.log('hh');
-  return cryptoJs.AES.decrypt(encryptedValue, password).toString(cryptoJs.enc.Utf8);
-};
+export const decryptValue = (encryptedValue: string, password: string) =>
+  AES.decrypt(encryptedValue, password).toString(enc.Utf8);
