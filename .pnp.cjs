@@ -41,12 +41,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mantine/rte", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:4.2.11"],\
             ["@testing-library/jest-dom", "npm:5.16.4"],\
             ["@testing-library/react", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:13.3.0"],\
+            ["@types/crypto-js", "npm:4.1.1"],\
             ["@types/react", "npm:18.0.14"],\
             ["@types/react-dom", "npm:18.0.5"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["@typescript-eslint/eslint-plugin", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:5.30.3"],\
             ["@typescript-eslint/parser", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:5.30.3"],\
             ["@vitejs/plugin-react", "npm:1.3.2"],\
+            ["crypto-js", "npm:4.1.1"],\
             ["eslint", "npm:8.19.0"],\
             ["eslint-config-prettier", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:8.5.0"],\
             ["eslint-import-resolver-typescript", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:3.1.5"],\
@@ -1440,6 +1442,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/crypto-js", [\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/@types-crypto-js-npm-4.1.1-1c4ce3312a-ea3d6a67b6.zip/node_modules/@types/crypto-js/",\
+          "packageDependencies": [\
+            ["@types/crypto-js", "npm:4.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/jest", [\
         ["npm:28.1.4", {\
           "packageLocation": "./.yarn/cache/@types-jest-npm-28.1.4-0d5921a434-97e22c6003.zip/node_modules/@types/jest/",\
@@ -2372,6 +2383,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["path-key", "npm:3.1.1"],\
             ["shebang-command", "npm:2.0.0"],\
             ["which", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["crypto-js", [\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/crypto-js-npm-4.1.1-38a3b8c19d-b3747c12ee.zip/node_modules/crypto-js/",\
+          "packageDependencies": [\
+            ["crypto-js", "npm:4.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5799,12 +5819,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mantine/rte", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:4.2.11"],\
             ["@testing-library/jest-dom", "npm:5.16.4"],\
             ["@testing-library/react", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:13.3.0"],\
+            ["@types/crypto-js", "npm:4.1.1"],\
             ["@types/react", "npm:18.0.14"],\
             ["@types/react-dom", "npm:18.0.5"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["@typescript-eslint/eslint-plugin", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:5.30.3"],\
             ["@typescript-eslint/parser", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:5.30.3"],\
             ["@vitejs/plugin-react", "npm:1.3.2"],\
+            ["crypto-js", "npm:4.1.1"],\
             ["eslint", "npm:8.19.0"],\
             ["eslint-config-prettier", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:8.5.0"],\
             ["eslint-import-resolver-typescript", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:3.1.5"],\
