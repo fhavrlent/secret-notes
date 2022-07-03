@@ -3,10 +3,9 @@ import { Container, Textarea } from '@mantine/core';
 import { RichTextEditor } from '@mantine/rte';
 import cryptoJs from 'crypto-js';
 
-const randomPassword = cryptoJs.lib.WordArray.random(128 / 8).toString();
+import { encryptValue } from './utils';
 
-const encryptValue = (value: string, password: string) =>
-  cryptoJs.AES.encrypt(value, password).toString();
+const randomPassword = cryptoJs.lib.WordArray.random(128 / 8).toString();
 
 export const Poc = () => {
   const [value, setValue] = useState('');
