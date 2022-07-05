@@ -8,11 +8,10 @@ export const useNoteCreator = () => {
 
   const { mutate, isLoading } = usePostNote();
 
-  const sendNote = () => {
+  const sendNote = async () => {
     const randomPassword = getRandomPassword();
     const encryptedNote = encryptValue(randomPassword, randomPassword);
-    mutate(encryptedNote);
-    setValue(encryptedNote);
+    mutate({ note: encryptedNote, onSuccess: (id) => console.log(`${id}#${randomPassword}`) });
   };
 
   return { value, setValue, isLoading, sendNote };
