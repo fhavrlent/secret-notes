@@ -1,9 +1,13 @@
 import { lazy, useEffect } from 'react';
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useColorScheme, useHotkeys, useLocalStorage } from '@mantine/hooks';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 import { AppWrapper } from './components/AppWrapper';
 
-const ClearTextArea = lazy(() => import('./ClearTextArea'));
+const NoteCreator = lazy(() => import('./pages/NoteCreator/NoteCreator'));
+
+const queryClient = new QueryClient();
 
 export const App = () => {
   const preferredColorScheme = useColorScheme();
@@ -26,9 +30,11 @@ export const App = () => {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        <AppWrapper>
-          <ClearTextArea />
-        </AppWrapper>
+        <QueryClientProvider client={queryClient}>
+          <AppWrapper>
+            <NoteCreator />
+          </AppWrapper>
+        </QueryClientProvider>
       </MantineProvider>
     </ColorSchemeProvider>
   );
