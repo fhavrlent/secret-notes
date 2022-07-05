@@ -1,15 +1,9 @@
-import { lazy, Suspense, useEffect } from 'react';
-import {
-  ColorScheme,
-  ColorSchemeProvider,
-  MantineProvider,
-  Loader,
-  Container,
-  Center,
-} from '@mantine/core';
+import { lazy, useEffect } from 'react';
+import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useColorScheme, useHotkeys, useLocalStorage } from '@mantine/hooks';
+import { AppWrapper } from './components/AppWrapper';
 
-const Poc = lazy(() => import('./Poc'));
+const ClearTextArea = lazy(() => import('./ClearTextArea'));
 
 export const App = () => {
   const preferredColorScheme = useColorScheme();
@@ -32,17 +26,9 @@ export const App = () => {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        <Suspense
-          fallback={
-            <Container>
-              <Center style={{ height: '100vh' }}>
-                <Loader />
-              </Center>
-            </Container>
-          }
-        >
-          <Poc />
-        </Suspense>
+        <AppWrapper>
+          <ClearTextArea />
+        </AppWrapper>
       </MantineProvider>
     </ColorSchemeProvider>
   );
