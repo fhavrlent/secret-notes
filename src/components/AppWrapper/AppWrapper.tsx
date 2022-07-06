@@ -46,11 +46,14 @@ export const AppWrapper = () => {
         <Header height={60}>
           <Group sx={{ height: '100%' }} px={20} position='apart'>
             <Title>Secret Notes</Title>
-            <Tooltip label={isDarkColorScheme ? 'Light Mode' : 'Dark Mode'}>
-              <ActionIcon variant='default' onClick={() => toggleColorScheme()} size={30}>
-                {isDarkColorScheme ? <Sun size={16} /> : <MoonStars size={16} />}
-              </ActionIcon>
-            </Tooltip>
+            <ActionIcon
+              variant='default'
+              onClick={() => toggleColorScheme()}
+              size={30}
+              title={isDarkColorScheme ? 'Light Mode' : 'Dark Mode'}
+            >
+              {isDarkColorScheme ? <Sun size={16} /> : <MoonStars size={16} />}
+            </ActionIcon>
           </Group>
         </Header>
       }

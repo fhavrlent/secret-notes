@@ -23,12 +23,12 @@ export default function NoteCreator() {
       </div>
       <Group mt={10} grow direction={isTabletOrLarger ? 'row' : 'column'}>
         <Group grow direction={isTabletOrLarger ? 'row' : 'column'}>
-          <Button color='teal' onClick={sendNote} disabled={isLoading}>
+          <Button color='indigo' onClick={sendNote} disabled={isLoading}>
             Encrypt
           </Button>
           <Button onClick={copyUrl}>Copy Link</Button>
         </Group>
-        <Input readOnly value={messageUrl} />
+        <Input readOnly value={messageUrl} title='encrypted note url' />
       </Group>
     </>
   );
