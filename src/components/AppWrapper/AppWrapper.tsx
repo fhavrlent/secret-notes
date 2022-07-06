@@ -1,5 +1,5 @@
-import { AppShell, Center, Container, Footer, Loader, useMantineTheme } from '@mantine/core';
 import { Suspense } from 'react';
+import { AppShell, Center, Container, Footer, Loader, useMantineTheme } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 
 export const AppWrapper = () => {
