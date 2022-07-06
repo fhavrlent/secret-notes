@@ -1,11 +1,8 @@
 import { AppShell, Center, Container, Footer, Loader, useMantineTheme } from '@mantine/core';
 import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 
-type Props = {
-  children: JSX.Element;
-};
-
-export const AppWrapper = ({ children }: Props) => {
+export const AppWrapper = () => {
   const theme = useMantineTheme();
   return (
     <AppShell
@@ -38,7 +35,7 @@ export const AppWrapper = ({ children }: Props) => {
             </Container>
           }
         >
-          {children}
+          <Outlet />
         </Suspense>
       </Container>
     </AppShell>
