@@ -65,6 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:18.2.0"],\
             ["react-query", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:3.39.1"],\
             ["react-router-dom", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:6.3.0"],\
+            ["tabler-icons-react", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:1.52.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"],\
             ["vite", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:2.9.13"],\
             ["vitest", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:0.17.0"]\
@@ -6249,6 +6250,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:18.2.0"],\
             ["react-query", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:3.39.1"],\
             ["react-router-dom", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:6.3.0"],\
+            ["tabler-icons-react", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:1.52.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"],\
             ["vite", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:2.9.13"],\
             ["vitest", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:0.17.0"]\
@@ -6562,6 +6564,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["synckit", "npm:0.7.2"],\
             ["@pkgr/utils", "npm:2.2.0"],\
             ["tslib", "npm:2.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tabler-icons-react", [\
+        ["npm:1.52.0", {\
+          "packageLocation": "./.yarn/cache/tabler-icons-react-npm-1.52.0-5d9db59b28-2615e90ee8.zip/node_modules/tabler-icons-react/",\
+          "packageDependencies": [\
+            ["tabler-icons-react", "npm:1.52.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:1.52.0", {\
+          "packageLocation": "./.yarn/__virtual__/tabler-icons-react-virtual-e57d4fee2e/0/cache/tabler-icons-react-npm-1.52.0-5d9db59b28-2615e90ee8.zip/node_modules/tabler-icons-react/",\
+          "packageDependencies": [\
+            ["tabler-icons-react", "virtual:5aa5be84e951a0210428bdc29eac435e804762d779e3bf3dd03e1aab178289a7727ad9cbaef8b5b5b2f4f99ab45af5a3182db1c6103918c3645b8ffee26d3a0a#npm:1.52.0"],\
+            ["@types/react", "npm:18.0.14"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
