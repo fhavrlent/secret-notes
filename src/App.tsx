@@ -6,7 +6,15 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { Router } from './Router';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+      staleTime: 0,
+      cacheTime: 0,
+    },
+  },
+});
 
 export const App = () => {
   const preferredColorScheme = useColorScheme();

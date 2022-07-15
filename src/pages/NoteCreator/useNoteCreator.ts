@@ -13,7 +13,7 @@ export const useNoteCreator = () => {
 
   const sendNote = async () => {
     const randomPassword = getRandomPassword();
-    const encryptedNote = encryptValue(randomPassword, randomPassword);
+    const encryptedNote = encryptValue(value, randomPassword);
 
     mutate({
       note: encryptedNote,

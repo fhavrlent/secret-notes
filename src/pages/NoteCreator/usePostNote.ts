@@ -1,6 +1,8 @@
 import { useMutation } from 'react-query';
 import axios from 'axios';
 
+import { API_URL } from '../../constants';
+
 type Params = {
   note: string;
   onSuccess: (id: string) => void;
@@ -9,10 +11,17 @@ type Params = {
 export const usePostNote = () =>
   useMutation(
     ({ note }: Params) =>
-      axios.post<{ id: string }>('https://run.mocky.io/v3/1b1bfb7c-5522-44a3-98bb-ae47cea1c47d', {
+      axios.post<{ data: { id: string } }>(`${API_URL}/note`, {
         note,
       }),
     {
-      onSuccess: ({ data: { id } }, { onSuccess }) => onSuccess(id),
+      onSuccess: (
+        {
+          data: {
+            data: { id },
+          },
+        },
+        { onSuccess },
+      ) => onSuccess(id),
     },
   );
