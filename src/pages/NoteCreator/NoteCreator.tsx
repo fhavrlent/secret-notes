@@ -3,7 +3,7 @@ import { useMediaQuery } from '@mantine/hooks';
 
 import { useNoteCreator } from './useNoteCreator';
 
-export default function NoteCreator() {
+export const NoteCreator = () => {
   const { setValue, value, sendNote, isLoading, messageUrl, copyUrl } = useNoteCreator();
 
   const isTabletOrLarger = useMediaQuery('(min-width: 768px)');
@@ -32,4 +32,4 @@ export default function NoteCreator() {
       </Group>
     </>
   );
-}
+};

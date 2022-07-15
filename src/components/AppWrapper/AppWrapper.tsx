@@ -9,11 +9,10 @@ import {
   Header,
   Loader,
   Title,
-  Tooltip,
   useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { Sun, MoonStars } from 'tabler-icons-react';
 
 export const AppWrapper = () => {
@@ -45,7 +44,9 @@ export const AppWrapper = () => {
       header={
         <Header height={60}>
           <Group sx={{ height: '100%' }} px={20} position='apart'>
-            <Title>Secret Notes</Title>
+            <Link to='/' typeof='text' style={{ color: 'inherit', textDecoration: 'none' }}>
+              <Title>Secret Notes - Work in progress</Title>
+            </Link>
             <ActionIcon
               variant='default'
               onClick={() => toggleColorScheme()}

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-export default function ReadMessageNotice() {
+export const ReadMessageNotice = () => {
   const { messageId } = useParams<{ messageId: string }>();
   const messagePassword = window.location.hash.replace('#', '');
 
@@ -9,7 +9,8 @@ export default function ReadMessageNotice() {
       <h1>Read Message Notice</h1>
       <p>You are about to read a message.</p>
       <p>The message ID is {messageId}.</p>
-      <p>The message password is {messagePassword}.</p>
+      <p title={messagePassword}>The message password is {messagePassword}.</p>
     </div>
   );
-}
+};
+ 
