@@ -11,9 +11,10 @@ import {
   Title,
   useMantineColorScheme,
   useMantineTheme,
+  Anchor,
 } from '@mantine/core';
 import { Link, Outlet } from 'react-router-dom';
-import { Sun, MoonStars } from 'tabler-icons-react';
+import { Sun, MoonStars, BrandGithub } from 'tabler-icons-react';
 
 export const AppWrapper = () => {
   const theme = useMantineTheme();
@@ -36,16 +37,11 @@ export const AppWrapper = () => {
           flex: 1,
         },
       }}
-      footer={
-        <Footer height={60} p='md'>
-          <Container>lorem ipsum</Container>
-        </Footer>
-      }
       header={
         <Header height={60}>
           <Group sx={{ height: '100%' }} px={20} position='apart'>
             <Link to='/' typeof='text' style={{ color: 'inherit', textDecoration: 'none' }}>
-              <Title>Secret Notes - Work in progress</Title>
+              <Title>Secret Notes</Title>
             </Link>
             <ActionIcon
               variant='default'
@@ -57,6 +53,15 @@ export const AppWrapper = () => {
             </ActionIcon>
           </Group>
         </Header>
+      }
+      footer={
+        <Footer height={60} p='md'>
+          <Container>
+            <Anchor href='https://github.com/fhavrlent/secret-notes' target='_blank'>
+              <BrandGithub />
+            </Anchor>
+          </Container>
+        </Footer>
       }
     >
       <Container>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { showNotification } from '@mantine/notifications';
 
 import { encryptValue, getRandomPassword } from '../../utils';
 import { usePostNote } from './usePostNote';
@@ -9,7 +10,24 @@ export const useNoteCreator = () => {
 
   const { mutate, isLoading } = usePostNote();
 
-  const copyUrl = () => navigator.clipboard.writeText(messageUrl);
+  const copyUrl = async () => {
+    try {
+      await navigator.clipboard.writeText(messageUrl);
+      showNotification({
+        title: 'Success',
+        message: 'Copied to clipboard',
+        disallowClose: true,
+        color: 'green',
+      });
+    } catch {
+      showNotification({
+        title: 'Error',
+        message: 'Copy failed',
+        disallowClose: true,
+        color: 'red',
+      });
+    }
+  };
 
   const sendNote = async () => {
     const randomPassword = getRandomPassword();
