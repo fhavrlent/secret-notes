@@ -22,7 +22,12 @@ export const ReadMessageNotice = () => {
       <Text mt='sm' mb='sm'>
         You are about to read a message, it will be deleted after that.
       </Text>
-      <Button mb='lg' color='red' onClick={() => refetch()} disabled={!!data?.note || isError}>
+      <Button
+        mb='lg'
+        color='red'
+        onClick={() => refetch()}
+        disabled={!!data?.note || isError || isFetching}
+      >
         Read the message
       </Button>
       <div style={{ position: 'relative' }}>

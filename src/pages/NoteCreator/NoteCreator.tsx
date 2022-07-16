@@ -23,12 +23,19 @@ export const NoteCreator = () => {
       </div>
       <Group mt={10} grow direction={isTabletOrLarger ? 'row' : 'column'}>
         <Group grow direction={isTabletOrLarger ? 'row' : 'column'}>
-          <Button color='indigo' onClick={sendNote} disabled={isLoading}>
+          <Button color='indigo' onClick={sendNote} disabled={isLoading || !value || !!messageUrl}>
             Encrypt
           </Button>
-          <Button onClick={copyUrl}>Copy Link</Button>
+          <Button onClick={copyUrl} disabled={!messageUrl}>
+            Copy Link
+          </Button>
         </Group>
-        <Input readOnly value={messageUrl} title='encrypted note url' />
+        <Input
+          readOnly
+          value={messageUrl}
+          title='encrypted note url'
+          placeholder='Encrypted note url'
+        />
       </Group>
     </>
   );
