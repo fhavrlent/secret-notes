@@ -38,7 +38,7 @@ export const App = () => {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        <NotificationsProvider>
+        <NotificationsProvider position='top-right'>
           <QueryClientProvider client={queryClient}>
             <BrowserRouter>
               <Router />
