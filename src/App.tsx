@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useColorScheme, useHotkeys, useLocalStorage } from '@mantine/hooks';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { BrowserRouter } from 'react-router-dom';
 import { NotificationsProvider } from '@mantine/notifications';
 
 import { Router } from './Router';
@@ -40,9 +39,7 @@ export const App = () => {
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
         <NotificationsProvider position='top-right'>
           <QueryClientProvider client={queryClient}>
-            <BrowserRouter>
-              <Router />
-            </BrowserRouter>
+            <Router />
           </QueryClientProvider>
         </NotificationsProvider>
       </MantineProvider>
