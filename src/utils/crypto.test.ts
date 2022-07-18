@@ -1,6 +1,14 @@
-import { decryptValue, encryptValue } from './crypto';
+import { decryptValue, encryptValue, getRandomPassword } from './crypto';
 
 describe('crypto', () => {
+  describe('getRandomPassword', () => {
+    it('generates random password', () => {
+      const password = getRandomPassword();
+      const anotherPassword = getRandomPassword();
+      expect(password).not.toEqual(anotherPassword);
+    });
+  });
+
   describe('encryptValue', () => {
     it('correctly encrypts a value', () => {
       const value = 'test';
