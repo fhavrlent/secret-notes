@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useQuery } from 'react-query';
+
 import { API_URL } from '../../constants';
 
 export const useGetNote = (id?: string) =>
